@@ -103,6 +103,7 @@
     font-size: 1.4rem;
     line-height: 2rem;
     font-weight: 500;
+    /* color: #3bc13b54; */
 
 }
 
@@ -115,7 +116,7 @@
 .caption_heavy {
     font-size: 1.2rem;
     line-height: 1.6rem;
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .small_light {

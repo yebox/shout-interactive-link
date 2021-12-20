@@ -22,18 +22,18 @@ const BaseLayout = (props) => {
   }, [router.pathname]);
 
   const navs = [
-    { name: "Brands", link: `/${currentPageSection}/brands`, icon: "bag", page: "brand-management" },
+    { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "affiliates-management" },
+    { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "brand-management" },
     { name: "Adverts", link: `/${currentPageSection}/adverts`, icon: "image-upload", page: "brand-management" },
-    { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "bag", page: "affiliates-management" },
-    { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "bag", page: "brand-management" },
-    { name: "Challenges", link: `/${currentPageSection}/challenges`, icon: "link", page: "challenges" },
-    { name: "Dashboard", link: `/${currentPageSection}/brands`, icon: "bag", page: "super-admin" },
-    { name: "Managers", link: `/${currentPageSection}/brands`, icon: "bag", page: "super-admin" },
-    { name: "Settings", link: `/${currentPageSection}/brands`, icon: "bag", page: "super-admin" },
+    { name: "Brands", link: `/${currentPageSection}/brands`, icon: "bag", page: "brand-management" },
+    { name: "Challenges", link: `/${currentPageSection}/challenges`, icon: "puzzle-piece", page: "challenges" },
+    { name: "Dashboard", link: `/${currentPageSection}/dashboard`, icon: "home-alt", page: "super-admin" },
+    { name: "Managers", link: `/${currentPageSection}/managers`, icon: "double-user", page: "super-admin" },
+    { name: "Settings", link: `/${currentPageSection}/settings`, icon: "gear", page: "super-admin" },
   ];
   return (
     <div className={styles.container}>
-      <nav className={styles.sidebar + " border-r border-b border-my-border-color--1 p-[16px] pr-[44px]"}>
+      <nav className={styles.sidebar + " border-r border-b border-gray-light p-[16px] pr-[44px]"}>
         <img className="w-[100px] h-[32px] mb-[58px] ml-[40px]" src="/Shout Logo.svg" />
         <ul className={styles.nav}>
           {navs.map((nav, i) => {
@@ -59,7 +59,7 @@ const BaseLayout = (props) => {
       </nav>
       <section className={styles.section}>
         <Header />
-        <main className="px-[48px] py-[42px]">{props.children}</main>
+        <main>{props.children}</main>
       </section>
     </div>
   );
