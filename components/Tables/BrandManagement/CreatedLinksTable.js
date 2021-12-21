@@ -1,4 +1,5 @@
 import Pagination from "@mui/material/Pagination";
+import BtnOutlinedWithIcon from "../../Buttons/BtnOutlinedWithIcon";
 
 const CreatedLinksTable = () => {
   return (
@@ -29,7 +30,10 @@ const CreatedLinksTable = () => {
             <td className="border-b border-r border-gray-lighter p-[16px] text-right align-text-bottom">Pepsi</td>
             <td className="border-b border-r border-gray-lighter p-[16px] text-right align-text-bottom">4</td>
             <td className="border-b border-r border-gray-lighter p-[16px] text-right align-text-bottom"># 8,000,000</td>
-            <td className="border-b border-r border-gray-lighter p-[16px] text-right align-text-bottom"># 8,000,000</td>
+            <td className="border-b border-r border-gray-lighter p-[16px] text-right align-text-bottom justify-end flex">
+              {" "}
+              <BtnOutlinedWithIcon color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[14px]"> </span>}></BtnOutlinedWithIcon>
+            </td>
           </tr>
         </tbody>
       </table>

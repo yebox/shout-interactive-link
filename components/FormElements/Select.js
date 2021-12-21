@@ -1,23 +1,60 @@
-import React from "react";
+import { red } from "@mui/material/colors";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import { makeStyles } from "@material-ui/core";
 
-const Select = () => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "&.MuiPaper-root": {
+      borderRadius: "0px",
+      boxShadow: "10px 10px 5px 0px blue;",
+    },
+  },
+}));
+
+const MySelect = ({ handleChange, label }) => {
+  const classes = useStyles();
+  const selectStyle = {
+    overflow: "hidden",
+    bgcolor: "#fff",
+    width: "375px",
+    height: "48px",
+    borderRadius: "16px",
+    fontSize: "14px",
+    fontFamily: "'SF Pro Display', sans-serif !important",
+    "& fieldset": {
+      border: "1px solid #DFE4E8",
+    },
+    "& fieldset.Mui-focused": {
+      bgcolor: red,
+    },
+    "& .MuiSelect-select": {
+      bgcolor: "white",
+      background: "url(/icons/angle-down.svg) ",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "96%",
+      px: "11px",
+    },
+    "& .MuiSvgIcon-root": {
+      display: "none",
+    },
+    "&.MuiInputBase-root:hover fieldset": {
+      border: "1px solid #110066",
+    },
+
+    "&.MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline": { borderColor: "#110066", borderWidth: "1px" },
+  };
   return (
-    <select
-      name="cars"
-      id="cars"
-      className="appearance-none bg-white cursor-pointer flex h-[48px] mb-[10px] max-w-[375px] min-w-[250px] w-full text-black-default body_light focus:border-primary focus:outline-0 border rounded-[16px] px-[8px] py-[14px] border-gray-light"
-      style={{
-        background: "url(/icons/angle-down.svg) no-repeat ",
-        backgroundPosition: "97%",
-      }}
-    >
-      <option value="none" className="d text">Select an option</option>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
+    <div className={classes.root}>
+      <label className="caption_heavy text-black-default flex mb-[8px]">{label}</label>
+
+      <Select sx={selectStyle} id="demo-simple-select" value={10} onChange={handleChange}>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+      </Select>
+    </div>
   );
 };
 
-export default Select;
+export default MySelect;

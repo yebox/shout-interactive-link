@@ -6,7 +6,7 @@ const BtnPrimary = ({ text, loading, handleClick, link = "" }) => {
     <Link href={link}>
       <LoadingButton
         disableElevation
-        sx={{ bgcolor: "#110066 !important", borderRadius: "8px", textTransform: "none", minWidth: "184px", height: "48px" }}
+        sx={{ bgcolor: "#110066 !important", borderRadius: "8px", textTransform: "none", minWidth: "184px", width: "100%", height: "48px" }}
         onClick={handleClick}
         loading={loading}
         loadingPosition="start"

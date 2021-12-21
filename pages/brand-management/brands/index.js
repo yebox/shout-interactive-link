@@ -5,6 +5,7 @@ import StatCard from "../../../components/Cards/StatCard";
 import BtnIcon from "../../../components/Buttons/BtnIcon";
 import Padding from "../../../components/Layouts/Padding";
 import BrandsTable from "../../../components/Tables/BrandManagement/BrandsTable";
+import Calender from "../../../components/FormElements/Calender";
 
 const Brands = () => {
   return (
@@ -22,6 +23,8 @@ const Brands = () => {
           <input className="border h-[48px] w-[362px] px-[16px] focus:border-gray-default text-[14px] rounded-2xl border-gray-default placeholder:text-gray-default" placeholder="Search..."></input>
         </div>
         <BrandsTable></BrandsTable>
+
+        {/* <Calender></Calender> */}
 
         {/* <BtnPrimary text="Create" loading={false}></BtnPrimary>
       <BtnOutlined text="Outlined"></BtnOutlined>

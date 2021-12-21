@@ -14,9 +14,6 @@ const Upload = () => {
           </label>
         </p>
       </div>
-      <p className="mt-[12px]">
-        <span className="ml-[10px] caption_light text-black-light">All files should be submitted with an aspect ratio of [aspect ratio] and dimentions of [dimensions].</span>
-      </p>
     </>
   );
 };

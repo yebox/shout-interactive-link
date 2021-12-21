@@ -1,27 +1,19 @@
 import React from "react";
 import Text from "../../components/FormElements/TextField";
+import BtnPrimary from "../../components/Buttons/BtnPrimary";
+import OnBoarding from "../../components/OnBoarding";
 
 const login = () => {
   return (
-    <div className="h-screen flex">
-      <div className="w-[568px] bg-primary h-screen relative">
-        <img src="/Shout Logo.svg" className="w-[170px] mt-[101px] ml-[70px]"></img>
-        <p className="ml-[70px] headline_heavy text-white">
-          You deserve to be <br></br>celebrated
-        </p>
-        <img src="/Decor-1.svg" className="w-[100%] mt-[20%]"></img>
-        <img src="/On-Boarding-Final.svg" className="w-[522px] absolute bottom-[120px] left-[66px]"></img>
-        {/* <img src="/Balloons 1.svg" className="absolute right-0 top-[60%] h-[171px]"></img> */}
-      </div>
-      <div className="w-[568px] p-64">
-        <select name="cars" id="cars" className="w-[375px] h-[42px]">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-      </div>
-    </div>
+    <OnBoarding>
+      <h2 className="headline_heavy mb-[37px] text-black-default">Login to Shouts</h2>
+      <Text label="Email Address"></Text>
+      <Text label="Password"></Text>
+      <BtnPrimary text="Login"></BtnPrimary>
+      <p className="body_light mt-[36px] text-black-light">
+        First time Logging in? <a className="text-primary underline cursor-pointer">Click here.</a>
+      </p>
+    </OnBoarding>
   );
 };
 

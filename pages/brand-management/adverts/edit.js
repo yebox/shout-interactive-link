@@ -9,7 +9,8 @@ import Text from "../../../components/FormElements/TextField";
 import Select from "../../../components/FormElements/Select";
 import RadioBtn from "../../../components/FormElements/RadioBtn";
 import Padding from "../../../components/Layouts/Padding";
-import Upload from "../../../components/Upload";
+import Upload from "../../../components/Upload/Upload";
+import UploadIndicator from "../../../components/Upload/Upload-Indicator";
 
 const EditAdvert = () => {
   return (
@@ -40,6 +41,11 @@ const EditAdvert = () => {
         </div>
         <div className="w-[350px]">
           <Upload></Upload>
+          <p className="mt-[12px] mb-[48px]">
+            <span className="icon-info-circle text-[13px] text-black-default bg-primary-lightest-2 p-2 rounded-full"></span>
+            <span className="ml-[10px] caption_light text-black-light">All files should be submitted with an aspect ratio of [aspect ratio] and dimentions of [dimensions].</span>
+          </p>
+          <UploadIndicator fileName={"pepsi.co...mp4"}></UploadIndicator>
         </div>
       </main>
     </Padding>

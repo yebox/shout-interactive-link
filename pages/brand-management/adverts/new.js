@@ -5,7 +5,7 @@ import Link from "next/link";
 import BtnOutlined from "../../../components/Buttons/BtnOutlined";
 import BtnPrimary from "../../../components/Buttons/BtnPrimary";
 import Padding from "../../../components/Layouts/Padding";
-import Upload from "../../../components/Upload";
+import Upload from "../../../components/Upload/Upload";
 
 const CreateNewAdvert = () => {
   return (
