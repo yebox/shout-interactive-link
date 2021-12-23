@@ -17,6 +17,13 @@ import { Stack } from "@mui/material";
 
 const ShoutLinks = () => {
   const [open, setOpen] = useState(false);
+  const stats = [
+    { title: "Advert Running", type: "number", value: "96" },
+    { title: "No. of Clicks", type: "people", value: "41" },
+    { title: "Total Reach", type: "people", value: "97" },
+    { title: "Expense Made", type: "money", value: "96" },
+    { title: "Total Engagement", type: "people", value: "96" },
+  ];
   function toggle() {
     console.log("toggleing...");
     open ? setOpen(false) : setOpen(true);
@@ -35,7 +42,7 @@ const ShoutLinks = () => {
           </Stack>
         </ModalContainer>
       </Dialog>
-      <div className="">
+      <div className="w-[1096px]">
         <header className="flex justify-between mb-[52px] items-center">
           <div>
             <h2 className="display_3_heavy">Manage Links</h2>
@@ -51,13 +58,15 @@ const ShoutLinks = () => {
         </div>
         <section className="">
           <div className="flex gap-[24px] overflow-x-scroll scroll_hide mb-[6.4rem]">
+            {stats.map((stat, i) => {
+              return <StatCard key={i} type={stat.type} text={stat.title} value={stat.value}></StatCard>;
+            })}
+            {/* <StatCard text="Adverts Running" value="14"></StatCard>
             <StatCard text="Adverts Running" value="14"></StatCard>
             <StatCard text="Adverts Running" value="14"></StatCard>
             <StatCard text="Adverts Running" value="14"></StatCard>
             <StatCard text="Adverts Running" value="14"></StatCard>
-            <StatCard text="Adverts Running" value="14"></StatCard>
-            <StatCard text="Adverts Running" value="14"></StatCard>
-            <StatCard text="Adverts Running" value="14"></StatCard>
+            <StatCard text="Adverts Running" value="14"></StatCard> */}
           </div>
           <div className="mb-[68px]">
             <p className="subheader_heavy text-black-default mb-[16px]">Created Links</p>

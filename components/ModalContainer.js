@@ -14,7 +14,7 @@ const ModalContainer = ({ children, icon, headerText, onClose, actionText }) => 
       <div>{children}</div>
 
       {/* modal footer */}
-      <div className="flex justify-between mt-[60px]">
+      <div className="flex justify-between mt-[60px] gap-5">
         <BtnOutlined text="Cancle"></BtnOutlined>
         <BtnPrimary text={actionText}></BtnPrimary>
       </div>

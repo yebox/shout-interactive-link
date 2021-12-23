@@ -20,7 +20,10 @@ const Brands = () => {
         </header>
         <div className="flex justify-between items-end mb-[15px] items-center">
           <a className="text-[#14B363] body_light underline cursor-pointer">Select</a>
-          <input className="border h-[48px] w-[362px] px-[16px] focus:border-gray-default text-[14px] rounded-2xl border-gray-default placeholder:text-gray-default" placeholder="Search..."></input>
+          <input
+            className="border h-[48px] w-[362px] px-[16px] focus:border-gray-default focus:outline-[0.1px] focus:outline-black-default text-[14px] rounded-2xl border-gray-default placeholder:text-gray-default focus:border"
+            placeholder="Search..."
+          ></input>
         </div>
         <BrandsTable></BrandsTable>
 

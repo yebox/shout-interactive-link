@@ -16,7 +16,7 @@ const CreateChallenge = () => {
         <div className="w-[942px]">
           <header className="flex justify-between mb-[52px] items-center">
             <div>
-              <Link href={"/brand-management/adverts/"}>
+              <Link href={"/party-management/challenges/"}>
                 <span className="icon-arrow-circle-left text-[32px] text-black-default cursor-pointer"></span>
               </Link>
               <h2 className="display_3_heavy ml-[13px]">Create New Challenge</h2>
@@ -41,7 +41,7 @@ const CreateChallenge = () => {
             <div className="flex gap-4 w-[380px] m-auto mt-[50px]">
               <BtnOutlined text="Cancel" link={"/brand-management/adverts"}></BtnOutlined>
 
-              <BtnPrimary text="Create Advert" link={"/party-management/challenges/success"}></BtnPrimary>
+              <BtnPrimary text="Create Challenge" link={"/party-management/challenges/success"}></BtnPrimary>
             </div>
           </main>
         </div>

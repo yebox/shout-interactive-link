@@ -13,7 +13,7 @@ const OnBoarding = ({ children }) => {
         {/* <img src="/Balloons 1.svg" className="absolute right-0 top-[60%] h-[171px]"></img> */}
       </div>
       <div className="flex-1 p-64 relative">
-        <div className="w-[377px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-3/4">{children}</div>
+        <div className="w-[377px] absolute top-2/4 left-1/2 mt-11 -translate-x-1/2 -translate-y-3/4">{children}</div>
       </div>
     </div>
   );

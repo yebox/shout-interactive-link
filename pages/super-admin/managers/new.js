@@ -25,7 +25,7 @@ const CreateNewManager = () => {
         <ManagerSwitcher></ManagerSwitcher>
         <div className="w-[981px]">
           <header className=" flex items-center">
-            <Link href={"/brand-management/brands/"}>
+            <Link href={"/super-admin/managers/"}>
               <span className="icon-arrow-circle-left text-[32px] text-black-default cursor-pointer"></span>
             </Link>
             <h1 className="display_3_heavy ml-[13px] mr-auto">Create New Manager</h1>

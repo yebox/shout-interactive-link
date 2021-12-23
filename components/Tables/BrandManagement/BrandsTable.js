@@ -1,4 +1,4 @@
-import Pagination from "@mui/material/Pagination";
+import Pagination from "../../Pagination";
 
 const BrandsTable = () => {
   return (
@@ -31,15 +31,7 @@ const BrandsTable = () => {
       </table>
       <div className="mt-[28px] flex justify-between items-center px-[20px] caption_light">
         <p>showing result 1-6 of 17 items</p>
-        <Pagination
-          sx={{
-            fontSize: "28px",
-            border: "1px solide gray",
-          }}
-          count={3}
-          variant="outlined"
-          shape="rounded"
-        />
+        <Pagination />
       </div>
     </>
   );
