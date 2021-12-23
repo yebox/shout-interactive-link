@@ -35,6 +35,7 @@ const BaseLayout = (props) => {
     <div className={styles.container}>
       <nav className={styles.sidebar + " border-r border-b border-gray-light p-[16px] pr-[44px]"}>
         <img className="w-[100px] h-[32px] mb-[40px] ml-[40px]" src="/Shout Logo.svg" />
+
         <ul className={styles.nav}>
           {navs.map((nav, i) => {
             return (
