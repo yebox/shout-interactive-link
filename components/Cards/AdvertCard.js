@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const AdvertCard = ({ reach, engagement, time_left, clicks }) => {
+const AdvertCard = ({ reach, engagement, time_left, clicks, link = "" }) => {
   return (
     <div className=" rounded-xl overflow-hidden shadow">
       <div className="card_head relative">
@@ -14,7 +14,7 @@ const AdvertCard = ({ reach, engagement, time_left, clicks }) => {
         <p className="body_light">Engagements - {engagement}</p>
         <p className="body_light">Clicks - {clicks}</p>
         <p className="body_light">Time Left - {time_left}</p>
-        <Link href={"/brand-management/adverts/edit"}>
+        <Link href={link}>
           <button className="bg-primary rounded-xl w-[56px] h-[36px] flex items-center justify-center ml-auto mt-[16px]">
             <span className="caption_heavy text-white">Edit</span>
           </button>

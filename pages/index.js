@@ -3,11 +3,12 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
-    router.push("/brand-management/brands/");
+    router.push("/brand-management/shout-links/");
   });
   return (
     <div className={styles.container}>
@@ -17,7 +18,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}></div>
+      <div className={styles.container}>
+        <div className="mx-auto my-auto grid justify-items-center justify-center mt-[300px]">
+          <CircularProgress color="inherit" />
+        </div>
+      </div>
     </div>
   );
 }

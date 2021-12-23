@@ -49,7 +49,7 @@ const CreateNewAdvert = () => {
           </div>
           <div className="flex gap-4 w-[380px] m-auto mx-auto mt-[48px]">
             <BtnOutlined text="Cancel"></BtnOutlined>
-            <BtnPrimary text="Create Advert"></BtnPrimary>
+            <BtnPrimary text="Create Advert" link="/brand-management/adverts/success"></BtnPrimary>
           </div>
         </main>
       </div>

@@ -36,12 +36,12 @@ const Adverts = () => {
             <BtnOutlinedWithIcon text={"All Adverts"} icon={<span className="icon-arrow-down-spear"></span>} />
           </div>
           <div className="ads_grid">
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/brand-management/adverts/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/brand-management/adverts/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/brand-management/adverts/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/brand-management/adverts/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/brand-management/adverts/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/brand-management/adverts/edit"></AdvertCard>
           </div>
         </section>
       </div>

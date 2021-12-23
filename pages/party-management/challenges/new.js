@@ -39,7 +39,7 @@ const CreateChallenge = () => {
               <InfoTag text="Challenges with great cover image/video get more engegements"></InfoTag>
             </div>
             <div className="flex gap-4 w-[380px] m-auto mt-[50px]">
-              <BtnOutlined text="Cancel" link={"/brand-management/adverts"}></BtnOutlined>
+              <BtnOutlined text="Cancel" link={"/party-management/challenges"}></BtnOutlined>
 
               <BtnPrimary text="Create Challenge" link={"/party-management/challenges/success"}></BtnPrimary>
             </div>

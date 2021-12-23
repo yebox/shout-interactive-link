@@ -36,10 +36,10 @@ const Index = () => {
             <BtnOutlinedWithIcon text="All Challenges" icon={<span className="icon-arrow-down-spear"></span>}></BtnOutlinedWithIcon>
           </div>
           <div className="ads_grid">
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
-            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)}></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/party-management/challenges/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/party-management/challenges/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/party-management/challenges/edit"></AdvertCard>
+            <AdvertCard clicks="500" engagement={300} time_left={"05d 05h 12m 43s"} reach={(14, 300)} link="/party-management/challenges/edit"></AdvertCard>
           </div>
         </section>
       </div>
