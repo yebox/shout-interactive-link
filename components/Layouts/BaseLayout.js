@@ -89,7 +89,7 @@ const BaseLayout = (props) => {
       </nav>
       <section className={`${styles.section}`}>
         <Header toggleNav={handleToggleNav} isCrossed={isCrossed} />
-        <main>{props.children}</main>
+        <main className="mt-[56px] md:mt-0">{props.children}</main>
       </section>
     </div>
   );

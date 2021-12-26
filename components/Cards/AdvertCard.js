@@ -15,7 +15,7 @@ const AdvertCard = ({ reach, engagement, time_left, clicks, link = "" }) => {
         <p className="body_light">Clicks - {clicks}</p>
         <p className="body_light">Time Left - {time_left}</p>
         <Link href={link}>
-          <button className="bg-primary rounded-xl w-[56px] h-[36px] flex items-center justify-center ml-auto mt-[16px]">
+          <button className="bg-primary rounded-xl w-[56px] h-[36px] flex items-center justify-center ml-auto md:mt-[16px]">
             <span className="caption_heavy text-white">Edit</span>
           </button>
         </Link>
