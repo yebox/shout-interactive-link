@@ -9,21 +9,23 @@ import Padding from "../../../components/Layouts/Padding";
 const CreateNewChallengeSuccess = () => {
   return (
     <Padding>
-      <div className="w-[949px]">
+      <div className="max-w-[949px]">
         <header className=" flex items-center mb-[62px]">
-          <Link href={"/brand-management/adverts/"}>
+          <Link href={"/party-management/challenges/"}>
             <span className="icon-arrow-circle-left text-[32px] text-black-default cursor-pointer"></span>
           </Link>
           <h1 className="display_3_heavy ml-[13px] mr-auto">Create New Challenge</h1>
         </header>
         <main className="h-[500px] rounded-3xl border-my-border-color--1 bg-gray-lightest-1 p-[48px] flex  items-center justify-center">
-          <div className=" flex flex-col items-center">
+          <div className=" flex flex-col items-center w-full max-w-[380px]">
             <img src="/images/success.png" className="mb-7"></img>
             <h1 className="display_3_heavy text-green-500 mb-6">Success!</h1>
             <p className="body_light mb-[40px]">Your advert has been created.</p>
-            <div className="flex gap-3 m-auto">
+            <div className="flex gap-3 w-full max-w-[380px]">
               <BtnOutlined text="Create More" link="/party-management/challenges/new"></BtnOutlined>
-              <BtnPrimary text="Done" link="/party-management/challenges/"></BtnPrimary>
+              <div className="w-full">
+                <BtnPrimary text="Done" link="/party-management/challenges/"></BtnPrimary>
+              </div>
             </div>
           </div>
         </main>

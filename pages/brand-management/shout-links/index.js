@@ -14,6 +14,7 @@ import Calender from "../../../components/FormElements/Calender";
 import MySelect from "../../../components/FormElements/Select";
 import Select from "../../../components/FormElements/Select";
 import { Stack } from "@mui/material";
+import DisplayHeader from "../../../components/Layouts/DisplayHeader";
 
 const ShoutLinks = () => {
   const [open, setOpen] = useState(false);
@@ -42,8 +43,8 @@ const ShoutLinks = () => {
           </Stack>
         </ModalContainer>
       </Dialog>
-      <div className="w-[1096px]">
-        <header className="flex justify-between mb-[52px] items-center">
+      <div className="max-w-[1094px]">
+        {/* <header className="flex justify-between mb-[52px] items-center">
           <div>
             <h2 className="display_3_heavy">Manage Links</h2>
             <p className="subheader_light">Here are the Shout Links you have created.</p>
@@ -51,13 +52,20 @@ const ShoutLinks = () => {
           <div onClick={toggle}>
             <BtnIcon text="Create Shout Link" link="/brand-management/shout-links/" icon={<span className="icon-plus-circle"> </span>}></BtnIcon>
           </div>
-        </header>
+        </header> */}
+        <DisplayHeader
+          action={toggle}
+          displayText={"Manage Links"}
+          subheaderText={"Here are the Shout Links you have created."}
+          Button={{ text: "Create Shout Link", link: "/brand-management/shout-links/" }}
+        />
+
         <div className="flex justify-between items-end mb-[18px]">
           <p className="subheader_heavy ">Current Shout Link Statistics</p>
           <BtnOutlinedWithIcon text="Copy Link" icon={<span className="icon-copy text-black-light text-[14px]"> </span>}></BtnOutlinedWithIcon>
         </div>
         <section className="">
-          <div className="flex gap-[24px] overflow-x-scroll scroll_hide mb-[6.4rem]">
+          <div className="flex gap-[24px] overflow-x-scroll scroll_hide mb-[1.6rem] md:mb-[6.4rem] border-dashed border-b md:border-none pb-7 md:pb-0">
             {stats.map((stat, i) => {
               return <StatCard key={i} type={stat.type} text={stat.title} value={stat.value}></StatCard>;
             })}
@@ -73,6 +81,10 @@ const ShoutLinks = () => {
             <CreatedLinksTable></CreatedLinksTable>
           </div>
           <div>
+            <div className="flex justify-between items-end mb-[16px]">
+              <p className="subheader_heavy text-black-default ">Previous Links</p>
+              <BtnOutlinedWithIcon text="View All" icon={<span className="inline-flex mt-1 icon-eye-view text-black-light text-[14px]"> </span>}></BtnOutlinedWithIcon>
+            </div>
             <PreviousLinksTable></PreviousLinksTable>
           </div>
         </section>

@@ -6,7 +6,15 @@ const BtnIcon = ({ text, icon, link, color }) => {
     <Link href={link}>
       <Button
         disableElevation
-        sx={{ minWidth: "148px", height: "48px", bgcolor: `${color ? color : "#110066"} !important`, textTransform: "none", borderRadius: "8px" }}
+        sx={{
+          minWidth: "148px",
+          whiteSpace: "nowrap",
+          fontFamily: "'SF Pro Display', sans-serif !important",
+          height: "48px",
+          bgcolor: `${color ? color : "#110066"} !important`,
+          textTransform: "none",
+          borderRadius: "8px",
+        }}
         variant="contained"
         startIcon={icon}
       >

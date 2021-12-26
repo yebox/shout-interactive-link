@@ -9,6 +9,8 @@ const BaseLayout = (props) => {
   const router = useRouter();
   const [activeLink, setActiveLink] = useState();
   const [currentPageSection, setCPS] = useState();
+  const [showNav, setShowNav] = useState(false);
+  const [isCrossed, setIsCrossed] = useState(false);
 
   useEffect(() => {
     console.log("path name", router.pathname);
@@ -20,6 +22,11 @@ const BaseLayout = (props) => {
     //get last element in the path that would determine what navs would be shown
     setActiveLink(urls[urls.length - 1]);
   }, [router.pathname]);
+
+  function handleToggleNav() {
+    setShowNav(!showNav);
+    setIsCrossed(!isCrossed);
+  }
 
   const navs = [
     // { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "affiliates-management" },
@@ -41,8 +48,8 @@ const BaseLayout = (props) => {
   ];
   return (
     <div className={styles.container}>
-      <nav className={styles.sidebar + " border-r border-b border-gray-light p-[16px] pr-[44px]"}>
-        <img className="w-[100px] h-[32px] mb-[40px] ml-[40px]" src="/Shout Logo.svg" />
+      <nav className={styles.sidebar + ` border-r border-b border-gray-light p-[16px] md:pr-[44px] ${showNav ? "block" : "hidden md:block"}`}>
+        <img className="w-[100px] h-[32px] mb-[40px] ml-[40px] hidden md:block" src="/Shout Logo.svg" />
 
         <ul className={styles.nav}>
           {navs.map((nav, i) => {
@@ -66,6 +73,7 @@ const BaseLayout = (props) => {
                     <li
                       onClick={() => {
                         setActiveLink(nav.link);
+                        handleToggleNav();
                       }}
                       className={styles.nav__item + ` hover:bg hover:bg-hover-color--1 ${router.pathname.includes(nav.link) ? "text-primary bg-gray-100" : ""}`}
                     >
@@ -79,8 +87,8 @@ const BaseLayout = (props) => {
           })}
         </ul>
       </nav>
-      <section className={styles.section}>
-        <Header />
+      <section className={`${styles.section}`}>
+        <Header toggleNav={handleToggleNav} isCrossed={isCrossed} />
         <main>{props.children}</main>
       </section>
     </div>

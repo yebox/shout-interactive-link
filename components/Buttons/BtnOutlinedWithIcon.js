@@ -12,7 +12,7 @@ const BtnOutlinedWithIcon = ({ text, icon, color }) => {
         },
       }}
     >
-      <button className={`px-[10px] h-[32px] ${color ? "border-success-default" : "border-gray-dark"}   rounded-xl border ml-[24px] flex items-center justify-center`}>
+      <button className={`px-[10px] h-[32px] whitespace-nowrap ${color ? "border-success-default" : "border-gray-dark"}   rounded-xl border  flex items-center justify-center`}>
         <span>{icon}</span>
         <span className="caption_heavy ml-[8px] text-gray-darker">{text}</span>
       </button>

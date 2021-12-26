@@ -11,7 +11,7 @@ const Edit = () => {
   return (
     <div className="bg-gray-lightest-1">
       <Padding>
-        <div className="w-[942px]">
+        <div className="max-w-[942px]">
           <header className="flex justify-between mb-[52px] items-center">
             <div>
               <Link href={"/party-management/challenges/"}>

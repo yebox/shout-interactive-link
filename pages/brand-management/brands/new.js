@@ -20,7 +20,7 @@ const CreateNewBrand = () => {
   return (
     <div className="bg bg-gray-lightest-1">
       <Padding>
-        <div className="w-[981px]">
+        <div className="max-w-[981px]">
           <header className=" flex items-center mb-[100px]">
             <Link href={"/brand-management/brands/"}>
               <span className="icon-arrow-circle-left text-[32px] text-black-default cursor-pointer"></span>
@@ -35,9 +35,9 @@ const CreateNewBrand = () => {
             )}
 
             <TextInput placeholder="Enter name" label="Brand Name" status="" message="status message goes here"></TextInput>
-            <div className="flex gap-4 w-[380px] mt-[50px]">
+            <div className="flex gap-4 max-w-[380px] mt-[50px]">
               <BtnOutlined text="Cancel"></BtnOutlined>
-              <div onClick={onCreate}>
+              <div className="w-full" onClick={onCreate}>
                 <BtnPrimary text="Add Brand"></BtnPrimary>
               </div>
             </div>

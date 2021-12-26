@@ -4,11 +4,11 @@ import BtnOutlinedWithIcon from "../../Buttons/BtnOutlinedWithIcon";
 const PreviousLinksTable = () => {
   return (
     <>
-      <div className="w-[1094px] overflow-x-scroll scroll_hide">
-        <div className="flex justify-between items-end mb-[16px]">
+      <div className="max-w-[1094px] overflow-x-scroll scroll_hide">
+        {/* <div className="flex justify-between items-end mb-[16px]">
           <p className="subheader_heavy text-black-default ">Previous Links</p>
           <BtnOutlinedWithIcon text="View All" icon={<span className="inline-flex mt-1 icon-eye-view text-black-light text-[14px]"> </span>}></BtnOutlinedWithIcon>
-        </div>
+        </div> */}
         <table className="border-l border-gray-lighter border-collapse min-w-[787px]">
           <thead className="text-bl text-black-light bg-gray-lightest-2 caption_heavy h-[48px] ">
             <tr>

@@ -1,12 +1,18 @@
 import Avatar from "@mui/material/Avatar";
+import BurgerMenu from "./BurgerMenu";
 
-const Header = () => {
+const Header = ({ toggleNav, isCrossed }) => {
   return (
-    <div className="h-[56px] flex items-center border-b border-my-border-color--1 py-[12px] px-[48px]">
-      <span className="icon-search text-[20px] mr-[15px] ml-auto"></span>
-      <span className="icon-question-circle text-[20px] mr-[15px]"></span>
+    <div className="h-[56px] flex items-center border-b border-my-border-color--1 py-[12px] px-[20px]">
+      <img className="w-[100px] h-[32px] -ml-4 md:hidden mr-auto" src="/Shout Logo.svg" />
+
+      <BurgerMenu toggleNav={toggleNav} isCrossed={isCrossed} />
+      <span className="icon-search text-[20px] mr-[15px] ml-auto hidden md:block"></span>
+      <span className="icon-question-circle text-[20px] mr-[15px] hidden md:block"></span>
       {/* <img src="/images/user-img.jpg" className="w-[32px] h-[32px] object-cover object-top rounded-full"></img> */}
-      <Avatar sx={{ bgcolor: "orange", width: "32px", height: "32px" }} alt="Remy Sharp" src="/images/user-img.jpg"></Avatar>
+      <div className=" hidden md:block">
+        <Avatar sx={{ bgcolor: "orange", width: "32px", height: "32px" }} alt="Remy Sharp" src="/images/user-img.jpg"></Avatar>
+      </div>
     </div>
   );
 };

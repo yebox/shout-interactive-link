@@ -17,7 +17,8 @@ const MySelect = ({ handleChange, label }) => {
   const selectStyle = {
     overflow: "hidden",
     bgcolor: "#fff",
-    width: "375px",
+    maxWidth: "375px",
+    width: "100%",
     height: "48px",
     borderRadius: "16px",
     fontSize: "14px",

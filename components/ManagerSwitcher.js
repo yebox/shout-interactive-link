@@ -9,7 +9,7 @@ const ManagerSwitcher = () => {
   };
 
   return (
-    <nav className="Switcher flex mb-[48px]">
+    <nav className="Switcher flex mb-[48px] overflow-x-scroll scroll_hide">
       {managerTypes.map((type, i) => {
         return (
           <p
@@ -17,7 +17,9 @@ const ManagerSwitcher = () => {
               handleSwitch(type);
             }}
             key={i}
-            className={`px px-[16px] py-[6px] transition-all  rounded-[8px] body_heavy  ${activeManager == type ? "text-black-default bg-primary-lightest-2" : "text-black-light"} cursor-pointer`}
+            className={` whitespace-nowrap  px px-[16px] py-[6px] transition-all  rounded-[8px] body_heavy  ${
+              activeManager == type ? "text-black-default bg-primary-lightest-2" : "text-black-light"
+            } cursor-pointer`}
           >
             {type}
           </p>

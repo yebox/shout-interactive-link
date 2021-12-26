@@ -17,7 +17,8 @@ const Calender = ({ label }) => {
     backgroundPosition: "96%",
     "& .MuiOutlinedInput-root": {
       borderRadius: "16px",
-      width: "375px",
+      maxWidth: "375px",
+      width: "100%",
       height: "48px",
       // background: "url(/icons/angle-down.svg) ",
     },
@@ -48,7 +49,7 @@ const Calender = ({ label }) => {
       <LocalizationProvider sx={{ width: "500px" }} dateAdapter={AdapterDateFns}>
         <DatePicker
           sx={{
-            ".MuiPaper-root .MuiCalendarPicker-root": {
+            "&.MuiFormControl-root .MuiTextField-root": {
               backgroundColor: "red",
             },
             "& .MuiCalendarPicker-root": {

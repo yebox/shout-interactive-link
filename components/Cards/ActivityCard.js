@@ -1,8 +1,8 @@
 const ActivityCard = () => {
   return (
-    <div className="h-[52px] rounded-[8px] border-gray-light border flex overflow-hidden cursor-pointer">
+    <div className="min-h-[52px] rounded-[8px] border-gray-light border flex overflow-hidden cursor-pointer">
       <div className="w-[72px]">
-        <img src="/images/pepsi-ads.jpg"></img>
+        <img className=" object-cover h-full" src="/images/pepsi-ads.jpg"></img>
       </div>
       <div className="p-[8px]">
         <p className="body_heavy text-black-default">Shout Link created by James McAvoy</p>
