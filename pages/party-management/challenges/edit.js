@@ -24,7 +24,7 @@ const Edit = () => {
 
           <main className="min-h-[664px] rounded-3xl border-my-border-color--1 bg-white  p-[20px] md:p-[48px]">
             <div className="flex mb-[30px] md:mb-[64px] flex-wrap">
-              <div className="flex-1">
+              <div className="flex-1 mr-5">
                 <Text label="Challenge name"></Text>
               </div>
               <div className="flex-1">

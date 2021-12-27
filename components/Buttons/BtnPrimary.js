@@ -8,6 +8,7 @@ const BtnPrimary = ({ text, loading, handleClick, link = "" }) => {
         <LoadingButton
           disableElevation
           sx={{
+            "&.MuiLoadingButton-root.MuiLoadingButton-loading": { color: "#F0F2F4" },
             bgcolor: "#110066 !important",
             whiteSpace: "nowrap",
             borderRadius: "8px",
@@ -21,6 +22,7 @@ const BtnPrimary = ({ text, loading, handleClick, link = "" }) => {
           onClick={handleClick}
           loading={loading}
           loadingPosition="start"
+          startIcon=""
           variant="contained"
         >
           <span className="body_heavy">{text}</span>
