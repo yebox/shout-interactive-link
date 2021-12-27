@@ -18,7 +18,7 @@ const CreateNewAdvertSuccess = () => {
         </header>
         <main className="h-[500px] rounded-3xl border-my-border-color--1 bg-gray-lightest-1 p-[48px] flex  items-center justify-center">
           <div className=" flex flex-col items-center w-full max-w-[380px]">
-            <img src="/images/success.png" className="mb-7" alt="success logo"></img>
+            <img src="/images/success.jpg" className="mb-7" alt="success logo"></img>
             <h1 className="display_3_heavy text-green-500 mb-6">Success!</h1>
             <p className="body_light mb-[40px]">Your advert has been created.</p>
             <div className="flex gap-3 w-full max-w-[380px]">
