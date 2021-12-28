@@ -28,7 +28,7 @@ const Verification = () => {
             onClick={() => {
               setLoading(true);
               setTimeout(() => {
-                router.push("/");
+                router.push("/brand-management/shout-links/");
               }, 1500);
             }}
           >

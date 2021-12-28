@@ -1,4 +1,5 @@
 import Padding from "../components/Layouts/Padding";
+import Link from "next/link";
 
 const NotFound = () => {
   return (
@@ -20,7 +21,9 @@ const NotFound = () => {
               </p>
             </div>
           </div>
-          <button className="bg-white text-black-default body_heavy rounded px-[75px] mt-[50px] py-5">Go back</button>
+          <Link href={"/"}>
+            <button className="bg-white text-black-default body_heavy rounded px-[75px] mt-[50px] py-5">Go back</button>
+          </Link>
         </div>
       </Padding>
     </div>
