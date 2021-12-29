@@ -13,7 +13,7 @@ const LineChart = () => {
     datasets: [
       {
         label: false,
-        data: [, 41, 45, 60, 47, 58, 43, 40, 61, 45, 60, 100, 80],
+        data: [, 41, 45, 60, 47, 58, 43, 40, 61, 45, 60, 95, 80],
         // borderColor: ["#61D5FF"],
         backgroundColor: ["#0a1f4431"],
         pointBorderColor: ["#61D5FF"],
@@ -66,10 +66,10 @@ const LineChart = () => {
     },
     scales: {
       x: {
-        display: false,
-        position: "bottom",
+        // display: false,
+        // position: "bottom",
         grid: {
-          display: true,
+          display: false,
           color: "red",
           // beginAtZero: true,
         },

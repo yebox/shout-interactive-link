@@ -61,6 +61,7 @@ const BaseLayout = (props) => {
                     <li
                       onClick={() => {
                         setActiveLink(nav.link);
+                        handleToggleNav();
                       }}
                       className={styles.nav__item + ` hover:bg hover:bg-hover-color--1 ${router.pathname.includes(nav.link) ? "text-primary bg-gray-100" : ""}`}
                     >
