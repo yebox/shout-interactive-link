@@ -8,20 +8,42 @@ import ManageAffiliatesTable from "../../../components/Tables/SuperAdmin/ManageA
 import DisplayHeader from "../../../components/Layouts/DisplayHeader";
 import ModalContainer from "../../../components/ModalContainer";
 import Dialog from "@mui/material/Dialog";
+import MyAlert from "../../../components/Alert";
 
 const Managers = () => {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showAlert, setShowALert] = useState(false);
+  const [alertText, setAlertText] = useState("");
+
   function toggle() {
     console.log("toggleing...");
     open ? setOpen(false) : setOpen(true);
+  }
+  function handleDelete() {
+    toggle();
+    setAlertText("The selected users have been deleted.");
+    setShowALert(true);
+  }
+  function handleDone() {
+    setAlertText("User account has been updated");
+    setShowALert(true);
+  }
+  function onClose() {
+    setShowALert(false);
   }
 
   return (
     <Padding>
       <ManagerSwitcher></ManagerSwitcher>
       <Dialog onClose={toggle} open={open}>
-        <ModalContainer actionText="Delete" onClose={toggle} headerText="Delete Accounts" icon={<span className="icon-trash-alt border text-[15px] font-bold text-black-default"></span>}>
+        <ModalContainer
+          onAction={handleDelete}
+          actionText="Delete"
+          onClose={toggle}
+          headerText="Delete Accounts"
+          icon={<span className="icon-trash-alt border text-[15px] font-bold text-black-default"></span>}
+        >
           <p className="body_light text-black-light text-center">Are you sure you want to delete the selected accounts?</p>
         </ModalContainer>
       </Dialog>
@@ -35,6 +57,12 @@ const Managers = () => {
           <BtnIcon text="Create New Manager" link="/super-admin/managers/new" icon={<span className="icon-plus-circle"> </span>}></BtnIcon>
         </header> */}
         <DisplayHeader displayText={"Manage Affiliates"} subheaderText={"Here, you can manage Shout’s affiliates."} Button={{ text: "Create New Manager", link: "/super-admin/managers/new" }} />
+        {showAlert && (
+          <div className="mb-[48px]">
+            <MyAlert text={alertText} title="Success" handleClose={onClose}></MyAlert>
+          </div>
+        )}
+
         <div className="flex  items-end mb-[15px] items-center">
           {!show && (
             <a
@@ -72,7 +100,7 @@ const Managers = () => {
           ></input>
         </div>
         {/* <BrandsTable></BrandsTable> */}
-        <ManageAffiliatesTable showSelect={show}></ManageAffiliatesTable>
+        <ManageAffiliatesTable handleDone={handleDone} showSelect={show}></ManageAffiliatesTable>
 
         {/* <BtnPrimary text="Create" loading={false}></BtnPrimary>
       <BtnOutlined text="Outlined"></BtnOutlined>

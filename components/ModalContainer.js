@@ -1,7 +1,7 @@
 import BtnPrimary from "./Buttons/BtnPrimary";
 import BtnOutlined from "./Buttons/BtnOutlined";
 
-const ModalContainer = ({ children, icon, headerText, onClose, actionText }) => {
+const ModalContainer = ({ children, icon, headerText, onClose, actionText, onAction }) => {
   return (
     <div className="px-[24px] py-[32px] rounded-[8px] md:w-[423px]">
       {/* modal header */}
@@ -15,8 +15,12 @@ const ModalContainer = ({ children, icon, headerText, onClose, actionText }) => 
 
       {/* modal footer */}
       <div className="flex justify-between mt-[60px] gap-5">
-        <BtnOutlined text="Cancle"></BtnOutlined>
-        <BtnPrimary text={actionText}></BtnPrimary>
+        <div className="flex-1" onClick={onClose}>
+          <BtnOutlined text="Cancel"></BtnOutlined>
+        </div>
+        <div className="flex-1" onClick={onAction}>
+          <BtnPrimary text={actionText}></BtnPrimary>
+        </div>
       </div>
     </div>
   );

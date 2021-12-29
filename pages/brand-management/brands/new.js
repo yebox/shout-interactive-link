@@ -36,7 +36,7 @@ const CreateNewBrand = () => {
 
             <TextInput placeholder="Enter name" label="Brand Name" status="" message="status message goes here"></TextInput>
             <div className="flex gap-4 max-w-[380px] mt-[50px]">
-              <BtnOutlined text="Cancel"></BtnOutlined>
+              <BtnOutlined text="Cancel" link="/brand-management/brands"></BtnOutlined>
               <div className="w-full" onClick={onCreate}>
                 <BtnPrimary text="Add Brand"></BtnPrimary>
               </div>

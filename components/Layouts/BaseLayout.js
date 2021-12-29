@@ -29,22 +29,23 @@ const BaseLayout = (props) => {
   }
 
   const navs = [
-    // { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "affiliates-management" },
-    // { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "brand-management" },
-    // { name: "Adverts", link: `/${currentPageSection}/adverts`, icon: "image-upload", page: "brand-management" },
-    // { name: "Brands", link: `/${currentPageSection}/brands`, icon: "bag", page: "brand-management" },
-    // { name: "Challenges", link: `/${currentPageSection}/challenges`, icon: "puzzle-piece", page: "challenges" },
-    // { name: "Dashboard", link: `/${currentPageSection}/dashboard`, icon: "home-alt", page: "super-admin" },
-    // { name: "Managers", link: `/${currentPageSection}/managers`, icon: "double-user", page: "super-admin" },
-    // { name: "Settings", link: `/${currentPageSection}/settings`, icon: "gear", page: "super-admin" },
-    // { name: "Shout-links", link: `/affiliates-management/shout-links`, icon: "shout-link-2", page: "affiliates-management" },
-    { name: "Shout-links", link: `/brand-management/shout-links`, icon: "shout-link-2", page: "brand-management" },
-    { name: "Adverts", link: `/brand-management/adverts`, icon: "image-upload", page: "brand-management" },
-    { name: "Brands", link: `/brand-management/brands`, icon: "bag", page: "brand-management" },
-    { name: "Challenges", link: `/party-management/challenges`, icon: "puzzle-piece", page: "challenges" },
-    { name: "Dashboard", link: `/super-admin/dashboard`, icon: "home-alt", page: "super-admin" },
-    { name: "Managers", link: `/super-admin/managers`, icon: "double-user", page: "super-admin" },
-    { name: "Settings", link: `/super-admin/settings`, icon: "gear", page: "super-admin" },
+    { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "affiliates-management" },
+    { name: "Shout-links", link: `/${currentPageSection}/shout-links`, icon: "shout-link-2", page: "brand-management" },
+    { name: "Adverts", link: `/${currentPageSection}/adverts`, icon: "image-upload", page: "brand-management" },
+    { name: "Brands", link: `/${currentPageSection}/brands`, icon: "bag", page: "brand-management" },
+    { name: "Challenges", link: `/${currentPageSection}/challenges`, icon: "puzzle-piece", page: "challenges" },
+    { name: "Dashboard", link: `/${currentPageSection}/dashboard`, icon: "home-alt", page: "super-admin" },
+    { name: "Managers", link: `/${currentPageSection}/managers`, icon: "double-user", page: "super-admin" },
+    { name: "Settings", link: `/${currentPageSection}/settings`, icon: "gear", page: "super-admin" },
+    { name: "Shout-links", link: `/affiliates-management/shout-links`, icon: "shout-link-2", page: "affiliates-management" },
+
+    // { name: "Shout-links", link: `/brand-management/shout-links`, icon: "shout-link-2", page: "brand-management" },
+    // { name: "Adverts", link: `/brand-management/adverts`, icon: "image-upload", page: "brand-management" },
+    // { name: "Brands", link: `/brand-management/brands`, icon: "bag", page: "brand-management" },
+    // { name: "Challenges", link: `/party-management/challenges`, icon: "puzzle-piece", page: "challenges" },
+    // { name: "Dashboard", link: `/super-admin/dashboard`, icon: "home-alt", page: "super-admin" },
+    // { name: "Managers", link: `/super-admin/managers`, icon: "double-user", page: "super-admin" },
+    // { name: "Settings", link: `/super-admin/settings`, icon: "gear", page: "super-admin" },
   ];
   return (
     <div className={styles.container}>
@@ -55,7 +56,7 @@ const BaseLayout = (props) => {
           {navs.map((nav, i) => {
             return (
               <>
-                {/* {router.pathname.includes(nav.page) && (
+                {router.pathname.includes(nav.page) && (
                   <Link href={nav.link} key={i}>
                     <li
                       onClick={() => {
@@ -67,8 +68,8 @@ const BaseLayout = (props) => {
                       <span className="body_light">{nav.name}</span>
                     </li>
                   </Link>
-                )} */}
-                {
+                )}
+                {/* {
                   <Link href={nav.link} key={i}>
                     <li
                       onClick={() => {
@@ -81,7 +82,7 @@ const BaseLayout = (props) => {
                       <span className="body_light">{nav.name}</span>
                     </li>
                   </Link>
-                }
+                } */}
               </>
             );
           })}

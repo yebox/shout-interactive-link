@@ -51,7 +51,7 @@ const EditAdvert = () => {
             </div>
           </div>
           <div className="flex gap-4 max-w-[380px] mt-[48px]">
-            <BtnOutlined text="Cancel"></BtnOutlined>
+            <BtnOutlined text="Cancel" link="/brand-management/adverts"></BtnOutlined>
             <BtnPrimary text="Edit Advert"></BtnPrimary>
           </div>
         </main>

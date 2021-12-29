@@ -8,7 +8,7 @@ import TextField from "../../FormElements/TextField";
 import Calender from "../../FormElements/Calender";
 import MySelect from "../../FormElements/Select";
 
-const ManageAffiliatesTable = ({ showSelect }) => {
+const ManageAffiliatesTable = ({ showSelect, handleDone }) => {
   // const [showCheckBox, setShow] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -20,6 +20,13 @@ const ManageAffiliatesTable = ({ showSelect }) => {
     console.log("toggleing...");
     open ? setOpen(false) : setOpen(true);
   }
+
+  function onSelectChange(p1, p2) {
+    console.log("selection change..");
+    console.log(p1);
+    console.log(p2);
+  }
+
   const rows = [
     { id: 1, lastName: "Snow", firstName: "Jon", age: 35, action: `<span>tets</span>` },
     { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
@@ -74,7 +81,16 @@ const ManageAffiliatesTable = ({ showSelect }) => {
   return (
     <>
       <Dialog onClose={toggle} open={open}>
-        <ModalContainer actionText="Done" onClose={toggle} headerText="Edit Brooklyn’s Account" icon={<span className="icon-pencile border text-[15px] font-bold"></span>}>
+        <ModalContainer
+          actionText="Done"
+          onClose={toggle}
+          onAction={() => {
+            handleDone();
+            toggle();
+          }}
+          headerText="Edit Brooklyn’s Account"
+          icon={<span className="icon-pencile border text-[15px] font-bold"></span>}
+        >
           <Stack gap={"24px"}>
             <TextField label="name"></TextField>
             <TextField label="Email"></TextField>
@@ -88,10 +104,17 @@ const ManageAffiliatesTable = ({ showSelect }) => {
         <DataGrid
           rows={rows}
           columns={columns}
+          onSelectionModelChange={onSelectChange}
+          onStateChange={(p1, p2, p3) => {
+            console.log("state change");
+            console.log(p1);
+            console.log(p2);
+            console.log(p3);
+          }}
           pageSize={6}
           rowsPerPageOptions={[5]}
           checkboxSelection={showSelect}
-          disableSelectionOnClick
+          // disableSelectionOnClick
           disableColumnFilter={true}
           disableColumnMenu={true}
           headerHeight={"48px"}

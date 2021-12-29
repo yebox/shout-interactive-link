@@ -4,6 +4,7 @@ import BtnOutlinedWithIcon from "../../components/Buttons/BtnOutlinedWithIcon";
 import StatCard from "../../components/Cards/StatCard";
 import ActivityCard from "../../components/Cards/ActivityCard";
 import { Stack } from "@mui/material";
+import LineChart from "../../components/LineChart";
 
 const DashBoard = () => {
   return (
@@ -33,7 +34,16 @@ const DashBoard = () => {
         <section className="flex gap-[24px] flex-wrap justify-between">
           <div className="max-w-[535px] w-full min-w-[300px] flex-1">
             <p className="subheader_heavy text-black-default mb-[12px]">Revenue</p>
-            <div className=" border border-gray-light rounded-[8px]  p-[24px]"></div>
+            <div className=" border border-gray-light rounded-[8px]  p-[24px]">
+              <header className="flex mb-[32px]">
+                <span className="icon-filter text-success-default text-[16px]"></span>
+                <span className="caption_heavy mr-auto ml-[6px] text-success-default">From All Sources</span>
+                <BtnOutlinedWithIcon text="This Month" icon={<span className="icon-arrow-down-spear text-black-light text-[14px]"> </span>}></BtnOutlinedWithIcon>
+              </header>
+              <div className="">
+                <LineChart></LineChart>
+              </div>
+            </div>
           </div>
           <div className="max-w-[535px] w-full min-w-[300px] flex-1">
             <p className="subheader_heavy text-black-default mb-[12px]">Recent Activities</p>
@@ -43,7 +53,7 @@ const DashBoard = () => {
                 <ActivityCard></ActivityCard>
                 <ActivityCard></ActivityCard>
                 <ActivityCard></ActivityCard>
-                <ActivityCard></ActivityCard>
+                {/* <ActivityCard></ActivityCard> */}
               </Stack>
             </div>
           </div>

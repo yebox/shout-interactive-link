@@ -48,7 +48,7 @@ const CreateNewManager = () => {
           )}
 
           <div className="flex gap-4 max-w-[380px] mt-[50px]">
-            <BtnOutlined text="Cancel"></BtnOutlined>
+            <BtnOutlined text="Cancel" link="/super-admin/managers"></BtnOutlined>
             <div className="w-full" onClick={onCreate}>
               <BtnPrimary text="Create Account"></BtnPrimary>
             </div>
