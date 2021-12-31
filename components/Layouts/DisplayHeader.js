@@ -9,6 +9,7 @@ const DisplayHeader = ({ Button = "", displayText, subheaderText, action = "" })
       </div>
       {Button && (
         <div
+          className="ml-auto"
           onClick={() => {
             action ? action() : "";
             // action();

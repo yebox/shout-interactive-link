@@ -1,6 +1,6 @@
 const ActivityCard = () => {
   return (
-    <div className="min-h-[56px] rounded-[8px] border-gray-light border flex overflow-hidden cursor-pointer">
+    <div className="min-h-[56px] max-h-max rounded-[8px] border-gray-light border flex overflow-hidden cursor-pointer">
       <div className="w-[72px]">
         <img className=" object-cover h-full" src="/images/pepsi-ads.jpg"></img>
       </div>
